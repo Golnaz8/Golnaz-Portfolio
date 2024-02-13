@@ -44,13 +44,14 @@ function LandingPage() {
     e.preventDefault();
   
     if (!name || !email || !message) {
-      alert("Please fill all required fields!");
+      alert("All fields required!");
+      return;
     }
   
     const formData = { name, email, message };
   
     try {
-      const response = await fetch('/.netlify/functions/send-mail', {
+      const response = await fetch('/.netlify/functions/send-email', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
