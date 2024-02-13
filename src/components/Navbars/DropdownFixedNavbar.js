@@ -40,7 +40,7 @@ function IconFixedNavbar() {
               GB FullStack
             </NavbarBrand>
             <UncontrolledTooltip target="navbar-brand">
-              Designed by Golnaz
+              Coded by Golnaz
             </UncontrolledTooltip>
             <button
               onClick={() => {
