@@ -40,7 +40,7 @@ function LandingPage() {
       <DropdownFixedNavbar />
       <div className="wrapper">
         <LandingPageHeader />
-        <div className="section section-about-us">
+        <div className="section section-about-us" id="projects">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
@@ -341,6 +341,7 @@ function LandingPage() {
           style={{
             backgroundImage: "url(" + require("assets/img/bg19.jpg") + ")",
           }}
+          id="about-me"
         >
           <Container>
             <Row>
@@ -397,7 +398,7 @@ function LandingPage() {
           </Container>
         </div>
 
-        <div className="section section-contact-us text-center">
+        <div className="section section-contact-us text-center" id="contact-us">
           <Container>
             <h2 className="title">Want to contact me?</h2>
             <p className="description">

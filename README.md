@@ -2,22 +2,22 @@
 
 <br>
 
-<p align="center">
+<!-- <p align="center">
   <a href="">
     <img
-      src=""
-      height="150px"
+      src="public/logo.png"
+      height="50px"
     />
   </a>
 </p>
 
  
-<br>
+<br> -->
 
 <p align="center">
   <a href="#">
     <img
-      src=""
+      src="https://github.com/Golnaz8/Golnaz-Portfolio/assets/133593128/fd3f544b-9723-4893-a7f8-01b80a33b90a"
       height="400px"
       width="100%"
     />
@@ -25,6 +25,7 @@
 </p>
 
 ## Description:
+Welcome to my personal portfolio! My name is Golnaz Berenjian, and I am a full-stack developer with a passion for creating beautiful and functional websites. This portfolio showcases a range of my projects, skills, and experiences in web development.
 
 
 <br>
@@ -141,6 +142,6 @@ At present, I officially aim to support the last two versions of the following b
 **Golnaz Berenjian**:
 
 - **Github**: [@golnaz8](https://github.com/Golnaz8)
-- **LinkedIn**: [@Naz Brj](https://www.linkedin.com/in/naz-brj/)
+- **LinkedIn**: [@Golnaz Brj](https://www.linkedin.com/in/golnaz-brj/)
   
 
