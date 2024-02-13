@@ -26,29 +26,30 @@ function LandingPageHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/golnaz-portfolio.png") + ")"
+            backgroundImage:
+              "url(" + require("assets/img/golnaz-portfolio.png") + ")",
           }}
           ref={pageHeader}
         ></div>
-        <div style={{marginTop:"60vh"}}>
+        <div style={{ marginTop: "60vh" }}>
           <Container>
             <h1 className="title">Golnaz Berenjian</h1>
             <h3>Software Engineer</h3>
 
             <div className="text-center">
-              <Button
+              {/* <Button
                 className="btn-icon btn-round mr-1"
                 color="info"
                 href="https://www.facebook.com/golnaz.berenjian"
-                onClick={(e) => e.preventDefault()}
+                target="_blank"
               >
                 <i className="fab fa-facebook-square"></i>
-              </Button>
+              </Button> */}
               <Button
                 className="btn-icon btn-round mr-1"
                 color="info"
                 href="https://www.linkedin.com/in/golnaz-brj"
-                onClick={(e) => e.preventDefault()}
+                target="_blank"
               >
                 <i className="fab fa-linkedin"></i>
               </Button>
@@ -56,7 +57,7 @@ function LandingPageHeader() {
                 className="btn-icon btn-round"
                 color="info"
                 href="https://github.com/golnaz8"
-                onClick={(e) => e.preventDefault()}
+                target="_blank"
               >
                 <i className="fab fa-github"></i>
               </Button>

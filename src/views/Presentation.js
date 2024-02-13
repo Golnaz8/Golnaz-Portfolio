@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // reactstrap components
 import {
@@ -24,6 +24,10 @@ import Footer from "components/Footers/Footer.js";
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -35,6 +39,39 @@ function LandingPage() {
       document.body.classList.remove("sidebar-collapse");
     };
   }, []);
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+  
+    if (!name || !email || !message) {
+      alert("Please fill all required fields!");
+    }
+  
+    const formData = { name, email, message };
+  
+    try {
+      const response = await fetch('/.netlify/functions/send-mail', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        setName("");
+        setEmail("");
+        setMessage("");
+        alert("Thank you for your message. I'll get back to you soon!");
+      } else {
+        alert("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Failed to send message", error);
+    }
+  };
+  
+
   return (
     <>
       <DropdownFixedNavbar />
@@ -81,10 +118,7 @@ function LandingPage() {
                       cursor: "pointer",
                     }}
                     onClick={() =>
-                      window.open(
-                        "https://www.writeguide.ai",
-                        "_blank"
-                      )
+                      window.open("https://www.writeguide.ai", "_blank")
                     }
                   ></div>
                 </Col>
@@ -150,10 +184,7 @@ function LandingPage() {
                       cursor: "pointer",
                     }}
                     onClick={() =>
-                      window.open(
-                        "https://www.lbimmigration.ca",
-                        "_blank"
-                      )
+                      window.open("https://www.lbimmigration.ca", "_blank")
                     }
                   >
                     <CardBody>
@@ -406,61 +437,66 @@ function LandingPage() {
             </p>
             <Row>
               <Col className="text-center ml-auto mr-auto" lg="6" md="8">
-                <InputGroup
-                  className={
-                    firstFocus ? "input-lg input-group-focus" : "input-lg"
-                  }
-                >
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="now-ui-icons users_circle-08"></i>
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="First Name..."
-                    type="text"
-                    onFocus={() => setFirstFocus(true)}
-                    onBlur={() => setFirstFocus(false)}
-                  ></Input>
-                </InputGroup>
-                <InputGroup
-                  className={
-                    emailFocus ? "input-lg input-group-focus" : "input-lg"
-                  }
-                >
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="now-ui-icons ui-1_email-85"></i>
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Email Here..."
-                    type="text"
-                    onFocus={() => setEmailFocus(true)}
-                    onBlur={() => setEmailFocus(false)}
-                  ></Input>
-                </InputGroup>
-                <div className="textarea-container">
-                  <Input
-                    cols="80"
-                    name="name"
-                    placeholder="Type a message..."
-                    rows="4"
-                    type="textarea"
-                  ></Input>
-                </div>
-                <div className="send-button">
+                <form onSubmit={submitHandler}>
+                  <InputGroup
+                    className={
+                      firstFocus ? "input-lg input-group-focus" : "input-lg"
+                    }
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons users_circle-08"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="First Name..."
+                      type="text"
+                      onFocus={() => setFirstFocus(true)}
+                      onBlur={() => setFirstFocus(false)}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    ></Input>
+                  </InputGroup>
+                  <InputGroup
+                    className={
+                      emailFocus ? "input-lg input-group-focus" : "input-lg"
+                    }
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons ui-1_email-85"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Email Here..."
+                      type="text"
+                      onFocus={() => setEmailFocus(true)}
+                      onBlur={() => setEmailFocus(false)}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    ></Input>
+                  </InputGroup>
+                  <div className="textarea-container">
+                    <Input
+                      cols="80"
+                      name="name"
+                      placeholder="Type a message..."
+                      rows="4"
+                      type="textarea"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    ></Input>
+                  </div>
                   <Button
                     block
                     className="btn-round"
                     color="info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
                     size="lg"
+                    type="submit"
                   >
                     Send Message
                   </Button>
-                </div>
+                </form>
               </Col>
             </Row>
           </Container>

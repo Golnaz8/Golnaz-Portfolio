@@ -94,8 +94,8 @@ Welcome to my personal portfolio! My name is Golnaz Berenjian, and I am a full-s
 <div align="center">
   <a href="#">
     <img
-      src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
-      alt="Vercel"
+      src="[![Netlify Status](https://api.netlify.com/api/v1/badges/b4e2c1a6-a929-4f5d-854f-a3adc300c981/deploy-status)](https://app.netlify.com/sites/golnaz-react-portfolio/deploys)"
+      alt="Netlify"
     />
   </a>
 </div>
