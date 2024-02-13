@@ -11,12 +11,9 @@ import {
   InputGroupAddon,
   InputGroupText,
   InputGroup,
-  NavItem,
-  NavLink,
-  Nav,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 // core components
@@ -25,7 +22,6 @@ import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
 
 function LandingPage() {
-  const [pills, setPills] = React.useState("1");
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
   React.useEffect(() => {
@@ -48,41 +44,41 @@ function LandingPage() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">Who we are?</h2>
-                <h5 className="description">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record low maximum sea ice extent tihs year down
-                  to low ice extent in the Pacific and a late drop in ice extent
-                  in the Barents Sea.
-                </h5>
+                <h2 className="title">My Projects:</h2>
+                <h3>My latest project is an ai-content generator</h3>
               </Col>
             </Row>
             <div className="separator separator-info"></div>
             <div className="section-story-overview">
               <Row>
-                <Col md="6">
+                <Col md="7">
                   <div
                     className="image-container image-left"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg38.jpg") + ")"
+                        "url(" +
+                        require("assets/img/workspace-ai-generator.webp") +
+                        ")",
                     }}
                   >
                     <p className="blockquote blockquote-info">
-                      "Over the span of the satellite record, Arctic sea ice has
-                      been declining significantly, while sea ice in the
-                      Antarctichas increased very slightly" <br></br>
+                      "AI is one of the most important things humanity is
+                      working on. It is more profound than, I dunno, electricity
+                      or fire." <br></br>
                       <br></br>
-                      <small>-NOAA</small>
+                      <small>-Sundar Pichai</small>
                     </p>
                   </div>
                   <div
                     className="image-container image-left-bottom"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg24.jpg") + ")"
+                        "url(" + require("assets/img/project-ai1.png") + ")",
+                      cursor: "pointer",
                     }}
+                    onClick={() =>
+                      (window.location.href = "https://www.writeguide.ai")
+                    }
                   ></div>
                 </Col>
                 <Col md="5">
@@ -90,298 +86,226 @@ function LandingPage() {
                     className="image-container image-right"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg39.jpg") + ")"
+                        "url(" +
+                        require("assets/img/ipad-desk-workspace-window.webp") +
+                        ")",
                     }}
                   ></div>
-                  <h3>
-                    So what does the new record for the lowest level of winter
-                    ice actually mean
-                  </h3>
+                  <h3>So why AI content generator?</h3>
                   <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
+                    An AI-content generator app serves as a pivotal tool in the
+                    rapidly evolving digital landscape for several compelling
+                    reasons. Primarily, it enhances productivity and efficiency
+                    across various sectors, including marketing, journalism,
+                    education, and creative writing. By automating the
+                    generation of written content, these applications can
+                    significantly reduce the time and effort required for
+                    content creation, enabling writers and businesses to produce
+                    high-quality, relevant content at scale.
+                  </p>
+                  <h3>Our App</h3>
+                  <p>
+                    At Write Guide AI, we're redefining content creation.
+                    Imagine inputting a few simple parameters – keywords,
+                    desired word count, tone, and title – and watching as our AI
+                    swiftly crafts high-quality articles up to 4000 words in
+                    under 5 minutes. Our platform extends its prowess to social
+                    media, creating posts that engage and resonate. Every piece
+                    of content is SEO-optimized, ensuring your message reaches
+                    its intended audience effectively.
                   </p>
                   <p>
-                    For a start, it does not automatically follow that a record
-                    amount of ice will melt this summer. More important for
-                    determining the size of the annual thaw is the state of the
-                    weather as the midnight sun approaches and temperatures
-                    rise. But over the more than 30 years of satellite records,
-                    scientists have observed a clear pattern of decline,
-                    decade-by-decade.
-                  </p>
-                  <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
+                    Our journey is not just about creating content but shaping
+                    the future of how digital content interacts with audiences
+                    and search engines alike.
                   </p>
                 </Col>
               </Row>
             </div>
           </Container>
+          <div className="projects-5">
+            <Container>
+              <Row>
+                <Col className="ml-auto mr-auto text-center" md="8">
+                  <h2 className="title">Some of my other Projects</h2>
+                  <div className="section-space"></div>
+                </Col>
+              </Row>
+              <Row>
+                <Col className="ml-auto" md="7">
+                  <Card
+                    className="card-background card-background-product card-raised"
+                    style={{
+                      backgroundImage:
+                        "url(" +
+                        require("assets/img/project-immigration.png") +
+                        ")",
+                    }}
+                  >
+                    <CardBody>
+                      <CardTitle tag="h2">lbimmigration.ca</CardTitle>
+                      <p className="card-description">
+                        This immigration website, crafted by a dedicated
+                        immigration lawyer, serves as a comprehensive resource
+                        for those seeking to navigate the various pathways to
+                        immigrate to Canada.
+                      </p>
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col className="mr-auto" md="5">
+                  <div className="info info-horizontal">
+                    <div className="icon icon-danger">
+                      <i className="now-ui-icons ui-2_chat-round"></i>
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">Description:</h4>
+                      <p className="description">
+                        lbimmigration.ca is offering valuable insights and
+                        information in two languages. It includes detailed
+                        assessment forms to guide individuals through the
+                        initial steps of the immigration process, ensuring
+                        personalized assistance and support at every stage.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="info info-horizontal">
+                    <div className="icon icon-danger">
+                      <i className="now-ui-icons tech_laptop"></i>
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">Code Details:</h4>
+                      <p className="description">
+                        This website is built using Next.js for server-side
+                        rendering and seamless page transitions, alongside
+                        Material-UI for a sleek, responsive design that enhances
+                        user interaction and accessibility.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              <hr></hr>
+              <Row>
+                <Col className="ml-auto mt-5" md="5">
+                  <div className="info info-horizontal">
+                    <div className="icon icon-warning">
+                      <i className="now-ui-icons ui-2_chat-round"></i>
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">Description:</h4>
+                      <p className="description">
+                        This project provides features such as the ability to
+                        add, delete and view financial history. With Wealth
+                        Tracker, users can stay organized and informed about how
+                        much they're spending, saving and if they're heading in
+                        the right direction to a better financial future.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="info info-horizontal">
+                    <div className="icon icon-warning">
+                      <i className="now-ui-icons tech_laptop"></i>
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">Code Details:</h4>
+                      <p className="description">
+                        This project leverages JavaScript for dynamic
+                        client-side scripting, Bootstrap for responsive design,
+                        Handlebars.js for efficient template rendering, and
+                        MySQL for robust database management.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+                <Col className="mr-auto" md="7">
+                  <Card
+                    className="card-background card-background-product card-raised"
+                    style={{
+                      backgroundImage:
+                        "url(" + require("assets/img/project-wealth-tracker.png") + ")", marginTop:"7vh"
+                    }}
+                  >
+                    <CardBody>
+                      <CardTitle tag="h2">Wealth Tracker</CardTitle>
+                      <p className="card-description">
+                        Wealth Tracker is a web application that allows users to
+                        create and manage their finances and personal spending.
+                      </p>
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         </div>
         <div
           className="testimonials-1 section-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg19.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/bg19.jpg") + ")",
           }}
         >
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="6">
-                <h2 className="title">What is ALPHA?</h2>
+                <h2 className="title">Who Am I?</h2>
                 <h4 className="description text-white">
-                  If you’re selected for ALPHA you’ll also get 3 tickets,
-                  opportunity to access Investor Office Hours and Mentor Hours
-                  and much more all for €850.
+                  FullStack JavaScript Web Designer
                 </h4>
               </Col>
             </Row>
             <Row>
-              <Col md="4">
+              <Col md="12">
                 <Card className="card-testimonial">
                   <div className="card-avatar">
                     <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img
                         alt="..."
                         className="img img-raised"
-                        src={require("assets/img/michael.jpg")}
+                        src={require("assets/img/golnaz-brj-team-photo.webp")}
                       ></img>
                     </a>
                   </div>
                   <CardBody>
-                    <p className="card-description">
-                      The networking at Web Summit is like no other European
-                      tech conference.
+                    <p className="card-description" style={{ color: "black" }}>
+                      Hello! I'm Golnaz, a dedicated and passionate computer
+                      engineer with a bachelor's degree in the field. My journey
+                      in technology is fueled by an insatiable love for coding
+                      and an earnest desire to create impactful solutions. With
+                      a strong foundation in JavaScript and React, I've honed my
+                      skills to specialize in both front-end and back-end
+                      technologies, including MySQL, MongoDB, and Next.js. My
+                      knowledge doesn't stop there – I'm also versed in AWS,
+                      which allows me to build and deploy scalable applications
+                      with ease.
+                      <br /> Beyond the world of coding, I immerse myself in the
+                      pages of books. Traveling is another passion of mine;
+                      exploring new places and cultures not only broadens my
+                      horizon but also inspires my work in unexpected ways.
+                      <br /> My love for staying active is reflected in my
+                      hobbies as well. Swimming and playing tennis are my go-to
+                      activities for staying fit and energized.
                     </p>
                   </CardBody>
                   <div className="icon icon-info">
                     <i className="fa fa-quote-right"></i>
                   </div>
                   <CardFooter>
-                    <CardTitle tag="h4">Michael Elijah</CardTitle>
-                    <p className="category">@michaelelijah</p>
-                  </CardFooter>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-testimonial">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        className="img img-raised"
-                        src={require("assets/img/olivia.jpg")}
-                      ></img>
-                    </a>
-                  </div>
-                  <CardBody>
-                    <p className="card-description">
-                      The connections you make at Web Summit are unparalleled,
-                      we met users all over the world.
-                    </p>
-                  </CardBody>
-                  <div className="icon icon-info">
-                    <i className="fa fa-quote-right"></i>
-                  </div>
-                  <CardFooter>
-                    <CardTitle tag="h4">Olivia Harper</CardTitle>
-                    <p className="category">@oliviaharper</p>
-                  </CardFooter>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-testimonial">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        className="img img-raised"
-                        src={require("assets/img/james.jpg")}
-                      ></img>
-                    </a>
-                  </div>
-                  <CardBody>
-                    <p className="card-description">
-                      Web Summit will increase your appetite, your inspiration,
-                      and your network.
-                    </p>
-                  </CardBody>
-                  <div className="icon icon-info">
-                    <i className="fa fa-quote-right"></i>
-                  </div>
-                  <CardFooter>
-                    <CardTitle tag="h4">James Logan</CardTitle>
-                    <p className="category">@jameslogan</p>
+                    <CardTitle tag="h4">Golnaz Berenjian</CardTitle>
+                    <p className="category"></p>
                   </CardFooter>
                 </Card>
               </Col>
             </Row>
           </Container>
         </div>
-        <div className="pricing-2">
-          <Container>
-            <Row>
-              <Col className="ml-auto mr-auto text-center" md="6">
-                <h2 className="title">Pick the best plan for you</h2>
-                <Nav
-                  className="nav-pills-info justify-content-center"
-                  pills
-                  role="tablist"
-                >
-                  <NavItem>
-                    <NavLink
-                      className={pills === "1" ? "active" : ""}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setPills("1");
-                      }}
-                      role="tablist"
-                      href="#pablo"
-                    >
-                      Legal Entity
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={pills === "2" ? "active" : ""}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setPills("2");
-                      }}
-                      role="tablist"
-                      href="#pablo"
-                    >
-                      Individual
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-              </Col>
-            </Row>
-            <Row>
-              <Col md="4">
-                <Card className="card-pricing card-plain">
-                  <CardBody>
-                    <h6 className="category">Enterprise</h6>
-                    <CardTitle tag="h1">
-                      <small>$</small>
-                      59
-                    </CardTitle>
-                    <ul>
-                      <li>
-                        <b>10GB</b> Disk Space
-                      </li>
-                      <li>
-                        <b>100GB</b> Monthly Bandwidth
-                      </li>
-                      <li>
-                        <b>20</b> Email Accounts
-                      </li>
-                      <li>
-                        <b>Unlimited</b> subdomains
-                      </li>
-                    </ul>
-                    <Button
-                      className="btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Sign Up
-                    </Button>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card
-                  className="card-pricing card-background card-raised"
-                  style={{
-                    backgroundImage:
-                      "url(" + require("assets/img/pricing2.jpg") + ")"
-                  }}
-                >
-                  <CardBody>
-                    <h6 className="category text-info">Professional</h6>
-                    <CardTitle tag="h1">
-                      <small>$</small>
-                      29
-                    </CardTitle>
-                    <ul>
-                      <li>
-                        <b>5GB</b> Disk Space
-                      </li>
-                      <li>
-                        <b>50GB</b> Monthly Bandwidth
-                      </li>
-                      <li>
-                        <b>10</b> Email Accounts
-                      </li>
-                      <li>
-                        <b>Unlimited</b> subdomains
-                      </li>
-                    </ul>
-                    <Button
-                      className="btn-neutral btn-round"
-                      color="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Sign Up
-                    </Button>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-pricing card-plain">
-                  <CardBody>
-                    <h6 className="category">Standard</h6>
-                    <CardTitle tag="h1">
-                      <small>$</small>
-                      17
-                    </CardTitle>
-                    <ul>
-                      <li>
-                        <b>2GB</b> Disk Space
-                      </li>
-                      <li>
-                        <b>25GB</b> Monthly Bandwidth
-                      </li>
-                      <li>
-                        <b>5</b> Email Accounts
-                      </li>
-                      <li>
-                        <b>Unlimited</b> subdomains
-                      </li>
-                    </ul>
-                    <Button
-                      className="btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Get Started
-                    </Button>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+
         <div className="section section-contact-us text-center">
           <Container>
-            <h2 className="title">Want to work with us?</h2>
-            <p className="description">Your project is very important to us.</p>
+            <h2 className="title">Want to contact me?</h2>
+            <p className="description">
+              Your opinions is very important to me.
+            </p>
             <Row>
               <Col className="text-center ml-auto mr-auto" lg="6" md="8">
                 <InputGroup
