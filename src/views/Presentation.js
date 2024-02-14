@@ -42,23 +42,23 @@ function LandingPage() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-  
+
     if (!name || !email || !message) {
       alert("All fields required!");
       return;
     }
-  
+
     const formData = { name, email, message };
-  
+
     try {
-      const response = await fetch('/.netlify/functions/send-email', {
+      const response = await fetch("/.netlify/functions/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
         setName("");
         setEmail("");
@@ -71,7 +71,6 @@ function LandingPage() {
       console.error("Failed to send message", error);
     }
   };
-  
 
   return (
     <>
@@ -81,13 +80,14 @@ function LandingPage() {
         <div className="section section-about-us" id="projects">
           <Container>
             <Row>
-              <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">My Projects:</h2>
-                <h3>
-                  My most recent project is a collaborative effort where I
-                  worked alongside a talented team to develop an ai content
-                  generator.
-                </h3>
+              <Col className="ml-auto mr-auto text-center" md="12">
+                {/* <h2 className="title">My Projects:</h2> */}
+                <h5 style={{fontWeight:"bold"}}>
+                  As a co-founder of a forward-thinking startup, I spearheaded a
+                  collaborative venture with a talented team to innovate in the
+                  realm of AI, culminating in the creation of a cutting-edge AI
+                  content generator.
+                </h5>
               </Col>
             </Row>
             <div className="separator separator-info"></div>
@@ -145,7 +145,7 @@ function LandingPage() {
                     content creation, enabling writers and businesses to produce
                     high-quality, relevant content at scale.
                   </p>
-                  <h3>Our App</h3>
+                  <h3>Our App: writeguide.ai</h3>
                   <p>
                     At Write Guide AI, we're redefining content creation.
                     Imagine inputting a few simple parameters – keywords,
@@ -169,7 +169,7 @@ function LandingPage() {
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
-                  <h2 className="title">Some of my other Projects</h2>
+                  <h2 className="title">Some of my Projects</h2>
                   <div className="section-space"></div>
                 </Col>
               </Row>
@@ -398,23 +398,31 @@ function LandingPage() {
                   </div>
                   <CardBody>
                     <p className="card-description" style={{ color: "black" }}>
-                      Hello! I'm Golnaz, a dedicated and passionate computer
-                      engineer with a bachelor's degree in the field. My journey
-                      in technology is fueled by an insatiable love for coding
-                      and an earnest desire to create impactful solutions. With
-                      a strong foundation in JavaScript and React, I've honed my
-                      skills to specialize in both front-end and back-end
-                      technologies, including MySQL, MongoDB, and Next.js. My
-                      knowledge doesn't stop there – I'm also versed in AWS,
-                      which allows me to build and deploy scalable applications
-                      with ease.
-                      <br /> Beyond the world of coding, I immerse myself in the
-                      pages of books. Traveling is another passion of mine;
-                      exploring new places and cultures not only broadens my
-                      horizon but also inspires my work in unexpected ways.
-                      <br /> My love for staying active is reflected in my
-                      hobbies as well. Swimming and playing tennis are my go-to
-                      activities for staying fit and energized.
+                      Hello! I'm Golnaz, an accomplished computer engineer with
+                      a master's degree in the field, illuminating the path of
+                      innovation and technology with my expertise. My journey in
+                      the tech landscape is driven by a boundless passion for
+                      coding and a steadfast commitment to crafting solutions
+                      that leave a lasting impact.
+                      <br /> As a master in computer engineering, I possess a
+                      comprehensive command over both front-end and back-end
+                      technologies, including but not limited to JavaScript,
+                      React, MySQL, MongoDB, and Next.js. My proficiency extends
+                      to AWS, enabling me to architect and deploy scalable
+                      applications seamlessly.
+                      <br />
+                      Beyond the realm of coding, I am a voracious reader,
+                      constantly seeking knowledge and inspiration within the
+                      pages of books. My zest for travel opens new avenues of
+                      creativity, allowing me to draw inspiration from diverse
+                      cultures and landscapes, enriching my work in profound
+                      ways.
+                      <br />
+                      Maintaining a balance between mind and body, I engage in
+                      swimming and tennis, activities that keep me vibrant and
+                      agile. These pursuits not only invigorate me physically
+                      but also sharpen my focus and enhance my creativity,
+                      empowering me to tackle challenges with vigor and vision.
                     </p>
                   </CardBody>
                   <div className="icon icon-info">
