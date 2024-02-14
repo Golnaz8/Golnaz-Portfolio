@@ -478,7 +478,7 @@ function LandingPage() {
                     </InputGroupAddon>
                     <Input
                       placeholder="Email Here..."
-                      type="text"
+                      type="email"
                       onFocus={() => setEmailFocus(true)}
                       onBlur={() => setEmailFocus(false)}
                       value={email}
