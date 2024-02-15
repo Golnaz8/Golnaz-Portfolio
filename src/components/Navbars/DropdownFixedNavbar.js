@@ -91,7 +91,7 @@ function IconFixedNavbar() {
                 <Button
                   className="nav-link btn-default"
                   color="neutral"
-                  href="#"
+                  href="https://docs.google.com/document/d/1vM2DqdbGt_vgWES2FEe3WXpgcphhYB-7/edit?usp=drive_link&ouid=114168789201802893623&rtpof=true&sd=true"
                   target="_blank"
                 >
                   <p>My Resume</p>
