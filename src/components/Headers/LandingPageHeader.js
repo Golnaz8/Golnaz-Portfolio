@@ -31,7 +31,7 @@ function LandingPageHeader() {
           }}
           ref={pageHeader}
         ></div>
-        <div style={{ marginTop: "60vh" }}>
+        <div style={{ marginTop: "45vh" }}>
           <Container>
             <h1 className="title">Golnaz Berenjian</h1>
             <h3>Software Engineer</h3>
