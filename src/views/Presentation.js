@@ -145,7 +145,7 @@ function LandingPage() {
                     content creation, enabling writers and businesses to produce
                     high-quality, relevant content at scale.
                   </p>
-                  <h3>Our App: <a href="www.writeguide.ai">writeguide.ai</a></h3>
+                  <h3>Our App: <a href="https://www.writeguide.ai">writeguide.ai</a></h3>
                   <p>
                     At Write Guide AI , we're redefining content creation.
                     Imagine inputting a few simple parameters – keywords,
