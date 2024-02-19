@@ -145,9 +145,9 @@ function LandingPage() {
                     content creation, enabling writers and businesses to produce
                     high-quality, relevant content at scale.
                   </p>
-                  <h3>Our App: writeguide.ai</h3>
+                  <h3>Our App: <a href="www.writeguide.ai">writeguide.ai</a></h3>
                   <p>
-                    At Write Guide AI, we're redefining content creation.
+                    At Write Guide AI , we're redefining content creation.
                     Imagine inputting a few simple parameters – keywords,
                     desired word count, tone, and title – and watching as our AI
                     swiftly crafts high-quality articles up to 4000 words in
@@ -231,7 +231,7 @@ function LandingPage() {
                   </div>
                 </Col>
               </Row>
-              <hr></hr>
+              <hr style={{fontWeight:"bold"}}></hr>
               <Row>
                 <Col className="ml-auto mt-5" md="5">
                   <div className="info info-horizontal">
