@@ -86,7 +86,7 @@ function IconFixedNavbar() {
                 >
                   <i className="now-ui-icons tech_mobile"></i> Contact
                 </a>
-              </NavItem>
+              </NavItem>npm install ajv
               <NavItem>
                 <Button
                   className="nav-link btn-default"
