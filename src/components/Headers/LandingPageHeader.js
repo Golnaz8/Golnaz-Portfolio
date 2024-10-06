@@ -3,6 +3,8 @@ import React from "react";
 // reactstrap components
 import { Button, Container } from "reactstrap";
 
+
+
 // core components
 
 function LandingPageHeader() {
@@ -27,7 +29,7 @@ function LandingPageHeader() {
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/golnaz-portfolio.png") + ")",
+              "url(" + require("assets/img/golnaz-portfolio-web.webp") + ")",
           }}
           ref={pageHeader}
         ></div>
