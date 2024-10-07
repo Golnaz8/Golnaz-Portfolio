@@ -99,7 +99,7 @@ function LandingPage() {
                     style={{
                       backgroundImage:
                         "url(" +
-                        require("assets/img/project-ai-back.png") +
+                        require("assets/img/project-ai-back.webp") +
                         ")",
                     }}
                   >
@@ -115,7 +115,7 @@ function LandingPage() {
                     className="image-container image-left-bottom"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/project-ai1.png") + ")",
+                        "url(" + require("assets/img/project-ai1.webp") + ")",
                       cursor: "pointer",
                     }}
                     onClick={() =>
@@ -180,7 +180,7 @@ function LandingPage() {
                     style={{
                       backgroundImage:
                         "url(" +
-                        require("assets/img/project-immigration.png") +
+                        require("assets/img/project-immigration.webp") +
                         ")",
                       cursor: "pointer",
                     }}
@@ -270,7 +270,7 @@ function LandingPage() {
                     style={{
                       backgroundImage:
                         "url(" +
-                        require("assets/img/project-wealth-tracker.png") +
+                        require("assets/img/project-wealth-tracker.webp") +
                         ")",
                       marginTop: "7vh",
                       cursor: "pointer",
@@ -371,7 +371,7 @@ function LandingPage() {
         <div
           className="testimonials-1 section-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg19.jpg") + ")",
+            backgroundImage: "url(" + require("assets/img/bg19.webp") + ")",
           }}
           id="about-me"
         >
